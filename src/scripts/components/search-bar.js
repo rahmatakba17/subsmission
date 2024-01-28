@@ -22,66 +22,105 @@ class SearchBar extends HTMLElement {
   render() {
     this.shadowDOM.innerHTML = `
       <style>
-        .search-container {
-          max-width: 600px;
-          width: 100%;
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          padding: 16px;
-          border-radius: 5px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          position: sticky;
-          margin-top: 15%;
-          background-color: white;
-        }
-        .search-container > input {
-          width: 75%;
-          padding: 16px;
-          border: 0;
-          border-bottom: 1px solid cornflowerblue;
-          font-weight: bold;
-        }
-        .search-container > input:focus {
-          outline: 0;
-          border-bottom: 2px solid cornflowerblue;
-        }
-        .search-container > input:focus::placeholder {
-          font-weight: bold;
-        }
-        .search-container >  input::placeholder {
-          color: cornflowerblue;
-          font-weight: normal;
-        }
-        .search-container > button {
-          width: 23%;
-          cursor: pointer;
-          margin-left: auto;
-          padding: 16px;
-          background-color: cornflowerblue;
-          color: white;
-          border: 0;
-          text-transform: uppercase;
-        }
-        @media screen and (max-width: 550px) {
-          .search-container {
-            flex-direction: column;
-            position: static;
-          }
-          .search-container > input {
-            width: 100%;
-            margin-bottom: 12px;
-          }
-          .search-container > button {
-            width: 100%;
-          }
-        }
-      </style>
+      .search-container {
+        width: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 1rem;
+        border-radius: 20px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        position: sticky;
+        margin-top: 6rem;
+        background-color: white;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+  .search-container > input {
+    width: 75%;
+    padding: 16px;
+    font-size: 1rem;
+    border: 0;
+    border-bottom: 1px solid #EAD196;
+    font-family: cursive;
+    font-weight: bold;
+  }
+
+  .search-container > input:focus {
+    outline: 0;
+    border-bottom: 2px solid #000000;
+  }
+
+  .search-container > input:focus::placeholder {
+    font-weight: bold;
+  }
+
+  .search-container > input::placeholder {
+    color: #000000;
+    font-weight: normal;
+  }
+
+  .search-container > button {
+    width: 22%;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 16px;
+    background-color: #EAD196;
+    color: #000000;
+    border: 0;
+    text-transform: uppercase;
+    border-radius: 5%;
+    font-weight: bold;
+    font-family: cursive;
+  }
+
+  @media screen and (max-width: 575.98px) {
+    .search-container {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .search-container > input {
+      font-size: 1.2rem;
+      width: 100% !important;
+      margin-bottom: 12px;
+    }
+
+    .search-container > button {
+      width: 8rem;
+      font-size: 0.7rem !important;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .search-container {
+      width: 60% !important;
+      margin-top: 3rem;
+    }
+    
+  @media (max-width: 991.98px) { 
+    .search-container {
+      width: 23rem;
+    } 
+  }
+
+  @media (max-width: 1199.98px) { 
+    .search-container {
+      width: 30rem;
+      margin-top:8rem;
+    }  
+  }
+  </style>
       
-      <div id="search-container" class="search-container">
-        <input placeholder="Find Your Movie" id="searchElement" type="search">
-        <button id="searchButtonElement" type="submit">Search</button>
-      </div>
+  <div id="search-container" class="search-container">
+    <input placeholder="Find Your Movie..." id="searchElement" type="search">
+    <button id="searchButtonElement" type="submit">Search</button>
+  </div>
     `;
 
     this.shadowDOM.querySelector('#searchButtonElement')
