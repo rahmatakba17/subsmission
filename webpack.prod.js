@@ -11,9 +11,6 @@ module.exports = merge(common, {
       new TerserPlugin(),
       new CssMinimizerPlugin(),
     ],
-    splitChunks: {
-      chunks: 'all',
-    },
   },
   module: {
     rules: [

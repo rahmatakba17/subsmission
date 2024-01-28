@@ -1,12 +1,10 @@
 import '../components/movie-list.js';
 import '../components/search-bar.js';
-import '../components/card-carousel.js';
 import DataSource from '../data/data-source.js';
 
 const main = () =>{
     const searchElement = document.querySelector('search-bar');
     const movieListElement = document.querySelector('movie-list');
-    const cardCarouselElement = document.querySelector('card-carousel');
 
     const onButtonSearchClicked = async () => {
         try{

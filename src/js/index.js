@@ -1,6 +1,6 @@
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'regenerator-runtime';
-import 'bootstrap-icons/font/bootstrap-icons.css';
 import * as bootstrap from 'bootstrap';
 import '../styles/style.css';
 import '../scripts/components/app-bar.js';
