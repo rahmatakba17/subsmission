@@ -1,5 +1,5 @@
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import css from 'bootstrap/dist/css/bootstrap.min.css';
 
 class CardCarousel extends HTMLElement{
 
@@ -10,6 +10,9 @@ class CardCarousel extends HTMLElement{
   }
     render(){
         this.shadowRoot.innerHTML = `
+        <style>
+            ${css}
+        </style>
         <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
