@@ -1,17 +1,46 @@
-import 'bootstrap-icons/font/bootstrap-icons.css';
 import css from 'bootstrap/dist/css/bootstrap.min.css';
+// import Alert from 'bootstrap/dist/js/dist/alert';
+
+// or, specify which plugins you need:
+import { Carousel, Toast, Popover } from 'bootstrap';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import '../../scss/styles.scss'
+
 
 class CardCarousel extends HTMLElement{
 
    
-    connectedCallback() {
-    this.attachShadow({mode: 'open'});
+//     connectedCallback() {
+//     this.attachShadow({mode: 'open'});
+//     this.render();
+//   }
+constructor() {
+    super();
+    this.shadowDOM = this.attachShadow({mode: 'open'});
+  }
+
+  connectedCallback() {
     this.render();
   }
     render(){
-        this.shadowRoot.innerHTML = `
+        this.shadowDOM.innerHTML = `
         <style>
             ${css}
+               * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        :host {
+          display: block;
+          width: 100%;
+          background-color: #000000;
+          justify-content: center;
+          text-align: center;
+          color: white;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          border-radius: 0 0 2rem 2rem;
+        }
         </style>
         <div id="carouselExampleCaptions" class="carousel slide">
             <div class="carousel-indicators">
